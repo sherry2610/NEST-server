@@ -5,8 +5,10 @@ import { Product } from "./products.model";
 export class ProductsServices {
   products: Product[] = []
 
-  insertProduct(title: string, description: string, price: string){
-    const newProduct = new Product(Math.random().toString(), title, description, price);
+  insertProduct(title: string, description: string, price: number){
+    const id = Math.random().toString()
+    const newProduct = new Product(id, title, description, price);
     this.products.push(newProduct)
+    return id
   }
 }
