@@ -11,4 +11,9 @@ export class ProductsServices {
     this.products.push(newProduct)
     return id
   }
+
+  getAllProducts(){
+    return [...this.products]
+  }
+
 }
